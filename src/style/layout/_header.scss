@@ -1,0 +1,26 @@
+#header {
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $medium) {
+        &>*:first-child{
+            flex: 0;
+        }
+    }
+
+    &>*{
+        flex: 1;
+    }
+
+    h1 {
+        font-family: 'Viaoda Libre', cursive;
+        font-size: calc(5px + 3.5vw);
+        color: black;
+    }
+
+}

@@ -1,0 +1,28 @@
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+
+    button{
+        margin-right: 1em;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: calc(5px + 2vw);
+        color: black;
+        font-weight: 200;
+        transition: all 0.2s;
+        
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &:hover{
+            color: white;
+        }
+    }
+
+    .active{
+        color: white;
+    }
+}
