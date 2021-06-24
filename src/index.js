@@ -4,9 +4,10 @@ import menu from './components/menu.js'
 import contact from './components/contact.js'
 
 const contentArea = document.createElement('section')
-contentArea.innerHTML = home()
+contentArea.appendChild(home())
 
 const changeComponent = function (event, module) {
+    contentArea.innerHTML = ''
     const btns = document.querySelectorAll('.navBtn')
     btns.forEach(element => {
         element.classList.remove('active')
@@ -16,11 +17,11 @@ const changeComponent = function (event, module) {
     clickedBtn.classList.add('active')
 
     if (clickedBtnId == "home-btn") {
-        contentArea.innerHTML = home()
+        contentArea.appendChild(home())
     }else if(clickedBtnId == "menu-btn") {
-        contentArea.innerHTML = menu()
+        contentArea.appendChild(menu())
     }else if(clickedBtnId == "contact-btn") {
-        contentArea.innerHTML = contact()
+        contentArea.appendChild(contact())
     }  
 }
 
